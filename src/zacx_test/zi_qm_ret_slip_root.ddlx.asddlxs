@@ -1,0 +1,25 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo.description.label: 'Return Delivery Output'
+annotate entity zi_qm_ret__slip_root with
+{
+  @UI.selectionField: [{ position: 20 }]
+  @UI.lineItem: [{ position: 10 }, { navigationAvailable: false},
+  { type: #FOR_ACTION, dataAction: 'preview', label: 'Issue Output', position: 10 }]
+  @EndUserText.label: 'Material Document Number'
+  MaterialDocument;
+  //@ui.selectionField: [{ position: 10 }]
+  //GRPostingDate;
+  //@ui.selectionField: [{ position: 20 }]
+  //CreatedBy;
+  @UI.lineItem: [{ position: 30 }]
+  Material;
+  @UI.lineItem: [{ position: 40 }]
+  MaterialDocumentItem;
+  @UI.lineItem: [{ position: 50 }]
+  MaterialDocumentYear;
+  @UI.lineItem: [{ position: 60 }]
+  Plant;
+  @UI.lineItem: [{ position: 70 }]
+  Batch;
+
+}

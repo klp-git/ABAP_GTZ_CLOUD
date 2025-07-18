@@ -1,0 +1,122 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Sales Order',
+    typeNamePlural: 'Sales Order',
+    title: {
+      type: #STANDARD,
+      label: 'Sales Order',
+      value: 'SalesDocument'
+    }
+  },
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'SalesDocument',
+      direction: #DESC
+    } ],
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view zcds_works_order with
+{
+  @UI.facet: [ {
+    id: 'idCollection',
+    type: #COLLECTION,
+    label: 'Sales Order',
+    position: 10,
+    purpose: #STANDARD
+  },
+  {
+    id: 'idIdentification',
+    parentId: 'idCollection',
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'General Information',
+    position: 10
+  } ]
+    @UI.lineItem: [ {
+    position: 10 ,
+    importance: #HIGH,
+    label: 'Sales Document No'
+  }
+  ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Sales Document No'
+  }
+  ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  SalesDocument;
+
+  @UI.lineItem: [ {
+    position: 15 ,
+    importance: #HIGH,
+    label: 'Sales Document Category'
+  }
+   ]
+  @UI.identification: [ {
+    position: 15 ,
+    label: 'Sales Document Category'
+  }
+   ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  SDDocumentCategory;
+
+  @UI.lineItem: [ {
+    position: 20 ,
+    importance: #HIGH,
+    label: 'Creation Date'
+  }
+
+  ]
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'Creation Date'
+  }
+    ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  @Consumption.filter:{ mandatory: true }
+  CreationDate;
+  @UI.lineItem: [ {
+    position: 30 ,
+    importance: #HIGH,
+    label: 'Customer Code'
+  }
+   ]
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'Customer Code'
+  }
+   ]
+  Customer;
+
+  @UI.lineItem: [ {
+    position: 40 ,
+    importance: #HIGH,
+    label: 'Customer Name'
+  } ]
+  @UI.identification: [ {
+    position: 40 ,
+    label: 'Customer Name'
+  } ]
+  BPCustomerName;
+
+
+  @UI.lineItem: [ {
+    position: 45 ,
+    importance: #HIGH,
+    label: 'Sales Person Name'
+  } ]
+  @UI.identification: [ {
+    position: 45 ,
+    label: 'Sales Person Name'
+  } ]
+  FullName;
+}

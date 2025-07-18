@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Export Quotation Print",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "exportquotation"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_9CA604C2DD60803663FD5C0F72673FD09EB1D529_TM",
+    "semanticObject": "export_quotation_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_9CA604C2DD60803663FD5C0F72673FD09EB1D529_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Export Quotation Print",
+        "subtitle": "zsd_export_print"
+      }
+    }
+  ]
+}

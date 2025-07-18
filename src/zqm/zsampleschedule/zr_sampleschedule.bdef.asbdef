@@ -1,0 +1,62 @@
+managed implementation in class ZBP_R_SAMPLESCHEDULE unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_SAMPLESCHEDULE alias ZrSampleschedule
+persistent table ZSAMPLESCHEDULE
+draft table ZSMPLESCHEDULE_D
+etag master LastChangedAt
+lock master total etag LocalLastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   Plant,
+   Storagelocation,
+   Productcode,
+   Batch,
+   Testnum;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Plant,
+   Storagelocation,
+   Productcode,
+   Batch,
+   Testnum;
+
+
+  create;
+  update;
+  delete;
+
+  static action createSampleSchedule parameter Z_I_SAMPLEPARM result [1] $self;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZSAMPLESCHEDULE
+  {
+    Plant = plant;
+    Storagelocation = storagelocation;
+    Productcode = productcode;
+    Productdesc = productdesc;
+    Batch = batch;
+    Scheduledate = scheduledate;
+    Testnum = testnum;
+    Remarks = remarks;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

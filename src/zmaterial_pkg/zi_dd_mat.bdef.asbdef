@@ -1,0 +1,29 @@
+managed;
+strict ( 2 );
+
+define behavior for ZI_DD_MAT alias Material
+implementation in class zbp_i_dd_mat unique
+
+
+
+persistent table zmaterial_table
+lock master
+authorization master ( instance )
+etag master Mat
+{
+  create;
+  update;
+  delete;
+  field ( readonly:update ) Mat;
+
+
+  mapping for zmaterial_table
+    {
+      Mat              = mat;
+      //HSCode = hs_code;
+      TradeName        = trade_name;
+      TechnicalName    = technical_name;
+      CASNumber        = cas_number;
+      QuantityMultiple = quantity_multiple;
+    }
+}

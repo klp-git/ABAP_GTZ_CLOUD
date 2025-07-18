@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "ZSF",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zsalesforcastv4"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_11A6EF6D2F8D110C5CEE08780494A95204BAF38E_TM",
+    "semanticObject": "zsalesforcast_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_11A6EF6D2F8D110C5CEE08780494A95204BAF38E_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZSF",
+        "subtitle": "Sales Forcast"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+interface;
+define behavior for ZI_RFQMATRIX alias RFQMATRIX
+use etag
+
+{
+  //use create;
+  use update;
+  use delete;
+
+  use action createRFQData;
+  use action createRFQDataPIR;
+}

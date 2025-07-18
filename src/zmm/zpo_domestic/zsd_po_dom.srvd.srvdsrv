@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination Of Purchase'
+define service ZSD_PO_DOM {
+  expose ZDD_PO_DOM;
+}

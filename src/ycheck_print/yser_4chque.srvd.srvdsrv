@@ -1,0 +1,5 @@
+@EndUserText.label: 'YSER_4CHQUE'
+define service YSER_4CHQUE {
+  expose YCHEQUEPRINT_;
+  expose YPLANT_YPACK as CompanyCode;
+}

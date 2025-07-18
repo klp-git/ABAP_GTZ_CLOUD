@@ -1,0 +1,4 @@
+@EndUserText.label: 'service binding for cn dn'
+define service Zsrv_binding_cn_dn {
+  expose zcds_FI_CN_DN;
+}

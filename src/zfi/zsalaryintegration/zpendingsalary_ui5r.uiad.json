@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "ZSALARY_INT",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zpendingsalary"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_B26AA26256BE3D4C8007905CFAA1D5E486C72A43_TM",
+    "semanticObject": "ZSALARY_INTEGRATION",
+    "action": "Manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_B26AA26256BE3D4C8007905CFAA1D5E486C72A43_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZSALARY_INT",
+        "subtitle": "Salary Integration"
+      }
+    }
+  ]
+}

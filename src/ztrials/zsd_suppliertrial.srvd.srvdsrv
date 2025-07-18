@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition for Supplier Trials'
+define service ZSD_SupplierTrial {
+  expose ZSupplierTrial;
+}

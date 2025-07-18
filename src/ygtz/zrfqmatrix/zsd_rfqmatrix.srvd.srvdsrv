@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition for RFQ Matrix'
+define service ZSD_RFQMatrix {
+  expose ZC_RFQMatrix as RFQMatrix;
+}

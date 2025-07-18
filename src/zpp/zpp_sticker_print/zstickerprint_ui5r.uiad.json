@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Sticker Print",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zppstickerprint"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_846C7EAFD40982C74633856ABA25501316FE0007_TM",
+    "semanticObject": "zstickerprint_so",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_846C7EAFD40982C74633856ABA25501316FE0007_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sticker Print",
+        "subtitle": "zsticker_print"
+      }
+    }
+  ]
+}

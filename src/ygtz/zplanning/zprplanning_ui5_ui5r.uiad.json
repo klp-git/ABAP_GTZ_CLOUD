@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "PR Planning",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zprplanning"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_79D49F5C15E063E6590B18A942B58C9588BA9AF7_TM",
+    "semanticObject": "zprplanning_so",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_79D49F5C15E063E6590B18A942B58C9588BA9AF7_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "PR Planning",
+        "subtitle": "zprp"
+      }
+    }
+  ]
+}

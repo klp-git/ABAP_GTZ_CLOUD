@@ -1,0 +1,121 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Purchase Order Domestic',
+    typeNamePlural: 'Order',
+    title: {
+      type: #STANDARD,
+      label: 'ZPO',
+      value: 'PurchaseOrder'
+    }
+  },
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'PurchaseOrder',
+      direction: #DESC
+    } ],
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZDD_PO_DOM with
+{
+  @UI.facet: [ {
+  id: 'idCollection',
+  type: #COLLECTION,
+  label: 'Orders',
+  position: 10,
+  purpose: #STANDARD
+  },
+  {
+  id: 'idIdentification',
+  parentId: 'idCollection',
+  type: #IDENTIFICATION_REFERENCE,
+  label: 'General Information',
+  position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    importance: #HIGH,
+    label: 'Purchase Order'
+  }
+  ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Purchase Order'
+  }
+  ]
+  @UI.selectionField: [{
+  position: 10
+   }]
+  PurchaseOrder;
+  @UI.lineItem: [ {
+    position: 20 ,
+    importance: #HIGH,
+    label: 'Supplier'
+  }
+  ]
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'Supplier'
+  }
+  ]
+  @UI.selectionField: [{
+  position: 20
+  }]
+  Supplier;
+  @UI.lineItem: [ {
+    position: 30 ,
+    importance: #HIGH,
+    label: 'Purchase Order Type'
+  }
+  ]
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'Purchase Order Type'
+  }
+  ]
+  @UI.selectionField: [{
+  position: 30
+  }]
+  PurchaseOrderType;
+  @UI.lineItem: [ {
+    position: 40 ,
+    importance: #HIGH,
+    label: 'Purchase Order Date'
+  }
+  ]
+  @UI.identification: [ {
+    position: 40 ,
+    label: 'Purchase Order Date'
+  }
+  ]
+  PurchaseOrderDate;
+  @UI.lineItem: [ {
+    position: 50 ,
+    importance: #HIGH,
+    label: 'Company Code Name'
+  }
+  ]
+  @UI.identification: [ {
+    position: 50 ,
+    label: 'Company Code Name'
+  }
+  ]
+  CompanyCodeName;
+
+  @UI.lineItem: [ {
+    position: 60 ,
+    importance: #HIGH,
+    label: 'Supplier Name'
+  }
+  ]
+  @UI.identification: [ {
+    position: 60 ,
+    label: 'Supplier Name'
+  }
+  ]
+  SupplierName;
+
+}

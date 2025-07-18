@@ -1,0 +1,12 @@
+projection;
+strict ( 2 );
+define behavior for ZC_PRPlanningTP alias PRPlanning
+use etag
+
+{
+  //use create; " disable create button
+  use update;
+  use action createPlanningData;
+  use action deletePlanData;
+
+}

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Domestic Quotation",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zdomquo.zdomquo"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_3C27438C583BC207DC4532C93A43B0176DC85C9D_TM",
+    "semanticObject": "zdomquo_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_3C27438C583BC207DC4532C93A43B0176DC85C9D_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Domestic Quotation",
+        "subtitle": "ZDOM_QUOTATION"
+      }
+    }
+  ]
+}

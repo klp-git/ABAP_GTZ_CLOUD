@@ -1,0 +1,120 @@
+@AccessControl.authorizationCheck: #CHECK
+@Metadata.allowExtensions: true
+@EndUserText.label: 'Purchase Line Projection View'
+@ObjectModel.semanticKey: [ 'Supplierinvoiceitem' ]
+@Search.searchable: true
+define view entity ZC_purchaselineTP
+  as projection on ZR_purchaselineTP as purchaseline
+{
+      @Search.defaultSearchElement: true
+      @Search.fuzzinessThreshold: 0.90
+  key Companycode,
+      @Search.defaultSearchElement: true
+      @Search.fuzzinessThreshold: 0.90
+  key Fiscalyearvalue,
+      @Search.defaultSearchElement: true
+      @Search.fuzzinessThreshold: 0.90
+  key Supplierinvoice,
+      @Search.defaultSearchElement: true
+      @Search.fuzzinessThreshold: 0.90
+  key Supplierinvoiceitem,
+    grnno,
+    grnline,
+      Postingdate,
+      Plantname,
+      Plantadr,
+      Plantcity,
+      Plantgst,
+      Plantpin,
+      Product,
+      Productname,
+      Othercharge_fright,
+      Assetno,
+      Assetname,
+      Purchaseorder,
+      Purchaseorderitem,
+
+      ////////////////////////////*******************//////////////////////////////////////
+      product_trade_name,
+      vendor_invoice_no,
+      vendor_invoice_date,
+      vendor_type,
+      VendorGroup,
+      TypeofEnterprise,
+      UdhyamAadharNo,
+      UdhyamCertificateDate,
+      UdhyamCertificateReceivingDate,
+      RFQNO,
+      RFQDate,
+      SupplierQuotation,
+      supplierquotationdate,
+      //////////////////////////////*******************/////////////////////////////////////
+
+      Baseunit,
+      Profitcenter,
+      Purchaseordertype,
+      Purchaseorderdate,
+      Purchasingorganization,
+      Purchasinggroup,
+      Mrnquantityinbaseunit,
+      Mrnpostingdate,
+      Hsncode,
+      Taxcodename,
+      Originalreferencedocument,
+      Igst,
+      Sgst,
+      Cgst,
+      Rateigst,
+      Ratecgst,
+      Ratesgst,
+      Rcmigst,
+      Rcmcgst,
+      Rcmsgst,
+      Gstinputtype,
+      Documenttypename,
+      Debitcreditcode,
+      Documentcurrency,
+      Exchangerate,
+      Taxablevalue,
+      Assessablevalue,
+      Invoicestatus,
+      JournaldocumentrefID,
+      Journaldocumentdate,
+      Isreversed,
+      Basicrate,
+      Poqty,
+      Pouom,
+      Netamount,
+      Taxamount,
+      Roundoff,
+      Manditax,
+      Mandicess,
+      Discount,
+      Totalamount,
+      Freight,
+      Insurance,
+      Ecs,
+      Epf,
+      Othercharges,
+      Packaging,
+      fidocumentno,
+      documenttype,
+      vendorname,
+      Suppliergstno,
+      supplierpanno,
+      VendorCode,
+      ewaybilldate,
+      ewaybillno,
+      grndate,
+      grnqty,
+      deliveryqty,
+      inboundno,
+      inbounddate,
+      inspectionlot,
+      inspectiondate,
+      taxcode,
+    
+
+      _purchaseinv : redirected to parent ZC_purchaseinvTP
+
+}

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Sales Forecast Upload",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "salesforecast"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_9E50361E5B10D528FF9A80DFC64920601164BC6B_TM",
+    "semanticObject": "zsales_forecast",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_9E50361E5B10D528FF9A80DFC64920601164BC6B_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sales Forecast Upload",
+        "subtitle": "zsf_upload"
+      }
+    }
+  ]
+}

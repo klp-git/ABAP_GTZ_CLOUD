@@ -1,0 +1,46 @@
+managed implementation in class zbp_upload_i_insp2 unique;
+
+strict ( 2 );
+
+
+define behavior for zi_upload_insp alias Inspection
+
+persistent table zupload_insp
+
+lock master
+
+authorization master ( instance )
+
+//etag master <field_name>
+
+{
+
+  create;
+
+  update;
+
+  delete;
+
+  field ( readonly ) CreatedBy, CreatedAt, LastChangedBy, LastChangedAt;
+
+  validation validateVendor on save { create; field Vendor; }
+
+  // Mapping view field  with table filed
+
+  mapping for zupload_insp
+    {
+      Materiala     = materiala;
+      Materialb     = materialb;
+      Movementype   = movementtype;
+      Plant         = plant;
+      Vendor        = vendor;
+      Poref         = poref;
+      Storageloc    = storageloc;
+      Trpoststatus  = trpoststatus;
+      CreatedAt     = created_at;
+      CreatedBy     = created_by;
+      LastChangedBy = last_changed_by;
+      LastChangedAt = last_changed_at;
+    }
+
+}

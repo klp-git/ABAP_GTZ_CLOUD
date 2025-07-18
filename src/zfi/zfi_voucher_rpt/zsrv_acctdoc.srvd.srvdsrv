@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZSRV_ACCTDOC'
+define service ZSRV_ACCTDOC {
+  expose ZCDS_ACCOUT;
+}

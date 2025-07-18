@@ -1,0 +1,151 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Plant'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Plant'
+annotate view ZC_SAMPLESCHEDULE with
+{
+  @EndUserText.label: 'Plant'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Plant'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Plant'
+  },
+    {  type: #FOR_ACTION, dataAction: 'createSampleSchedule', label: 'Create Sample Schedule'  }
+    ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_PlantStdVH', element: 'Plant' } }]
+  Plant;
+  
+  @EndUserText.label: 'Storage location'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Storage location'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Storage location'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_StorageLocationStdVH', element: 'StorageLocation' } }]
+  Storagelocation;
+  
+  @EndUserText.label: 'Product'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Product'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Product'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZR_ProductAll_VH', element: 'Product' },
+                                        additionalBinding: [{ localElement: 'Productdesc',
+                                                              element: 'ProductDescription' }]
+                                    }]
+  Productcode;
+  
+  @EndUserText.label: 'Product description'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Product description'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Product description'
+  } ]
+  Productdesc;
+  
+  @EndUserText.label: 'Batch'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Batch'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Batch'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_BatchStdVH', element: 'Batch' } }]
+  Batch;
+  
+  @EndUserText.label: 'Schedule date'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Schedule date'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Schedule date'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Scheduledate;
+  
+  @EndUserText.label: 'Test Number'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Test Number'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Test Number'
+  } ]
+  Testnum;
+
+  @EndUserText.label: 'Remarks'
+  @UI.identification: [ {
+    position: 75 , 
+    label: 'Remarks'
+  } ]
+  @UI.lineItem: [ {
+    position: 75 , 
+    label: 'Remarks'
+  } ]
+  Remarks;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  CreatedAt;
+  
+  @UI.hidden: true
+  LastChangedBy;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

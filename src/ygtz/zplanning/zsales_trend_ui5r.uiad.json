@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "ZST",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zsalestrendv4"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_CD52D67966C30FD74196A87F65C259EC76AF6340_TM",
+    "semanticObject": "zsales_trend_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_CD52D67966C30FD74196A87F65C259EC76AF6340_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZST",
+        "subtitle": "Sales Trend"
+      }
+    }
+  ]
+}

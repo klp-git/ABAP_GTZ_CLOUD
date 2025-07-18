@@ -1,0 +1,5 @@
+extend view entity E_SALESDOCUMENTBASIC with
+{
+  PERSISTENCE.ZZ_ADVLIC_SDH as ZZ_ADVLIC_SDH
+  
+}

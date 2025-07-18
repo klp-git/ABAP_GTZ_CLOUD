@@ -1,0 +1,19 @@
+managed implementation in class zcl_qm_ret_slip_root unique; //zbp_i_qm_ret__slip_root unique;
+strict ( 2 );
+
+define behavior for zi_qm_ret__slip_root //alias <alias_name>
+//persistent table <???>
+with unmanaged save
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  field ( readonly ) MaterialDocument;
+  field ( readonly ) MaterialDocumentItem;
+  field ( readonly ) MaterialDocumentYear;
+  action ( features : instance ) preview result [1] $self;
+  //  create;
+  //  update;
+  //  delete;
+  //  field ( readonly ) MaterialDocumentYear, MaterialDocument, MaterialDocumentItem;
+}

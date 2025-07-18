@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZAPPC_TABLE_PLANTAPP'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZAPPC_TABLE_PLANTAPP'
+  }
+}
+define service ZAPPUI_TABLE_PLANT_O4APP provider contracts odata_v4_ui {
+  expose ZAPPC_TABLE_PLANTAPP;
+}

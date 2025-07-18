@@ -1,0 +1,6 @@
+@EndUserText.label: 'Behavior for service definition'
+define service ZUI_SALARYINT {
+  expose ZC_SALARYINT     as Salary;
+  expose ZC_SALARYINTPOST as SalaryPosted;
+  expose ZC_SALARYINTDEL  as SalaryDel;
+}

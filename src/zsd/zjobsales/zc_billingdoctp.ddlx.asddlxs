@@ -1,0 +1,583 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'BillingDoc',
+    typeNamePlural: 'BillingDocs',
+    title: {
+      type: #STANDARD,
+      label: 'BillingDoc',
+      value: 'Bukrs'
+    }
+  },
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Bukrs',
+      direction: #DESC
+    } ],
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZC_BillingDocTP with
+{
+  @UI.facet: [ {
+    id: 'idCollection',
+    type: #COLLECTION,
+    label: 'BillingDoc',
+    position: 10
+  },
+  {
+    id: 'idIdentification',
+    parentId: 'idCollection',
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'General Information',
+    position: 20
+  },
+  {
+    id: 'idBillingLines',
+    type: #LINEITEM_REFERENCE,
+    label: 'BillingLines',
+    position: 30 ,
+    targetElement: '_BillingLines'
+  } ]
+    @UI.lineItem: [ {
+      position: 10 ,
+      importance: #HIGH,
+      label: 'Bukrs'
+    } ]
+    @UI.identification: [ {
+      position: 10 ,
+      label: 'Bukrs'
+    } ]
+    @UI.selectionField: [ {
+      position: 10
+    } ]
+    Bukrs;
+  
+    @UI.lineItem: [ {
+      position: 20 ,
+      importance: #HIGH,
+      label: 'Fiscalyearvalue'
+    } ]
+    @UI.identification: [ {
+      position: 20 ,
+      label: 'Fiscalyearvalue'
+    } ]
+    @UI.selectionField: [ {
+      position: 20
+    } ]
+    Fiscalyearvalue;
+  
+    @UI.lineItem: [ {
+      position: 30 ,
+      importance: #HIGH,
+      label: 'Billingdocument'
+    } ]
+    @UI.identification: [ {
+      position: 30 ,
+      label: 'Billingdocument'
+    } ]
+    @UI.selectionField: [ {
+      position: 30
+    } ]
+    Billingdocument;
+  //  @UI.lineItem: [ {
+  //    position: 40 ,
+  //    importance: #HIGH,
+  //    label: 'Sales Quotation - PI Number'
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 40 ,
+  //    label: 'Sales Quotation - PI Number'
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 40
+  //  } ]
+  //  referencesddocument;
+  //  @UI.lineItem: [ {
+  //    position: 50 ,
+  //    importance: #HIGH,
+  //    label: 'Sales Quotation - PI Creation Date'
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 50 ,
+  //    label: 'Sales Quotation - PI Creation Date'
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 50
+  //  } ]
+  //  creationdate;
+  //  @UI.lineItem: [ {
+  //    position: 60 ,
+  //    importance: #HIGH,
+  //    label: 'Sales Person'
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 60 ,
+  //    label: 'Sales Person'
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 60
+  //  } ]
+  //  fullname;
+  //  @UI.lineItem: [ {
+  //    position: 70 ,
+  //    importance: #HIGH,
+  //    label: 'Sale Order Person'
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 70 ,
+  //    label: 'Sale Order Person'
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 70
+  //  } ]
+  //  salesdocument;
+  //  @UI.lineItem: [ {
+  //    position: 80 ,
+  //    importance: #HIGH,
+  //    label: 'Sale Order Creation Date'
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 80 ,
+  //    label: 'Sale Order Creation Date'
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 80
+  //  } ]
+  //  sales_creationdate;
+  //  @UI.lineItem: [ {
+  //    position: 90 ,
+  //    importance: #HIGH,
+  //    label: 'Customer PO Number'
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 90 ,
+  //    label: 'Customer PO Number'
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 90
+  //  } ]
+  //  purchaseorderbycustomer;
+  //  @UI.lineItem: [ {
+  //    position: 100 ,
+  //    importance: #HIGH,
+  //    label: 'Sold to party GSTIN'
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 100 ,
+  //    label: 'Sold to party GSTIN'
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 100
+  //  } ]
+  //  taxnumber3;
+  //   @UI.lineItem: [ {
+  //    position: 120 ,
+  //    importance: #HIGH,
+  //    label: 'Sold-to Party Name'
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 120 ,
+  //    label: 'Sold-to Party Name'
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 120
+  //  } ]
+  //  customername;
+  //   @UI.lineItem: [ {
+  //    position: 130 ,
+  //    importance: #HIGH,
+  //    label: 'Sold-to Party Number'
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 130 ,
+  //    label: 'Sold-to Party Number'
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 130
+  //  } ]
+  //  soldtoparty;
+  //  @UI.lineItem: [ {
+  //    position: 140 ,
+  //    importance: #HIGH,
+  //    label: 'Ship to Party Number'
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 140 ,
+  //    label: 'Ship to Party Number'
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 140
+  //  } ]
+  //  shiptoparty;
+  //  @UI.lineItem: [ {
+  //    position: 150 ,
+  //    importance: #HIGH,
+  //    label: 'Ship to Party Name'
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 150 ,
+  //    label: 'Ship to Party Name'
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 150
+  //  } ]
+  //  ship_customername;
+  //   @UI.lineItem: [ {
+  //    position: 160 ,
+  //    importance: #HIGH,
+  //    label: 'Ship to Party GST No.'
+  //  } ]
+  //  @UI.identification: [ {
+  //    position: 160 ,
+  //    label: 'Ship to Party GST No.'
+  //  } ]
+  //  @UI.selectionField: [ {
+  //    position: 160
+  //  } ]
+  //  ship_taxnumber3;
+//  @UI.lineItem: [ {
+//   position: 10 ,
+//   importance: #HIGH,
+//   label: 'Sales Quotation - PI Number'
+// } ]
+//  @UI.identification: [ {
+//    position: 10 ,
+//    label: 'Sales Quotation - PI Number'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 10
+//  } ]
+//  referencesddocument;
+//  @UI.lineItem: [ {
+//  position: 20 ,
+//  importance: #HIGH,
+//  label: 'Sales Quotation - PI Creation Date'
+//  } ]
+//  @UI.identification: [ {
+//    position: 20 ,
+//    label: 'Sales Quotation - PI Creation Date'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 20
+//  } ]
+//  creationdate;
+//  @UI.lineItem: [ {
+//  position: 30 ,
+//  importance: #HIGH,
+//  label: 'Sales Person'
+//  } ]
+//  @UI.identification: [ {
+//    position: 30 ,
+//    label: 'Sales Person'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 30
+//  } ]
+//  fullname;
+//   @UI.lineItem: [ {
+//  position: 40 ,
+//  importance: #HIGH,
+//  label: 'Sale Order Number'
+//  } ]
+//  @UI.identification: [ {
+//    position: 40 ,
+//    label: 'Sale Order Number'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 40
+//  } ]
+//  salesdocument;
+//  
+//   @UI.lineItem: [ {
+//  position: 50 ,
+//  importance: #HIGH,
+//  label: 'Sale Order Creation Date'
+//  } ]
+//  @UI.identification: [ {
+//    position: 50 ,
+//    label: 'Sale Order Creation Date'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 50
+//  } ]
+//  sales_creationdate;
+//   @UI.lineItem: [ {
+//  position: 60 ,
+//  importance: #HIGH,
+//  label: 'Customer PO Number'
+//  } ]
+//  @UI.identification: [ {
+//    position: 60 ,
+//    label: 'Customer PO Number'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 60
+//  } ]
+//  purchaseorderbycustomer;
+//   @UI.lineItem: [ {
+//  position: 70 ,
+//  importance: #HIGH,
+//  label: 'Sold to party GSTIN'
+//  } ]
+//  @UI.identification: [ {
+//    position: 70 ,
+//    label: 'Sales Person'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 70
+//  } ]
+//  taxnumber3;
+//   @UI.lineItem: [ {
+//  position: 80 ,
+//  importance: #HIGH,
+//  label: 'Co Code'
+//  } ]
+//  @UI.identification: [ {
+//    position: 80 ,
+//    label: 'Co Code'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 80
+//  } ]
+//  Bukrs;
+//   @UI.lineItem: [ {
+//  position: 90 ,
+//  importance: #HIGH,
+//  label: 'Sold-to Party Name'
+//  } ]
+//  @UI.identification: [ {
+//    position: 90 ,
+//    label: 'Sold-to Party Name'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 90
+//  } ]
+//  customername;
+//   @UI.lineItem: [ {
+//  position: 100 ,
+//  importance: #HIGH,
+//  label: 'Sold-to Party Number'
+//  } ]
+//  @UI.identification: [ {
+//    position: 100 ,
+//    label: 'Sold-to Party Number'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 100
+//  } ]
+//  soldtoparty;
+//   @UI.lineItem: [ {
+//  position: 110 ,
+//  importance: #HIGH,
+//  label: 'Ship to Party Number'
+//  } ]
+//  @UI.identification: [ {
+//    position: 110 ,
+//    label: 'Ship to Party Number'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 110
+//  } ]
+//  shiptoparty;
+//   @UI.lineItem: [ {
+//  position: 120 ,
+//  importance: #HIGH,
+//  label: 'Ship to Party Name '
+//  } ]
+//  @UI.identification: [ {
+//    position: 120 ,
+//    label: 'Ship to Party Name '
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 120
+//  } ]
+//  ship_customername;
+//   @UI.lineItem: [ {
+//  position: 130 ,
+//  importance: #HIGH,
+//  label: 'Ship to Party GST No.'
+//  } ]
+//  @UI.identification: [ {
+//    position: 130 ,
+//    label: 'Ship to Party GST No.'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 130
+//  } ]
+//  ship_taxnumber3;
+//  @UI.lineItem: [ {
+//  position: 140 ,
+//  importance: #HIGH,
+//  label: 'Delivery Place State Code'
+//  } ]
+//  @UI.identification: [ {
+//    position: 140 ,
+//    label: 'Delivery Place State Code'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 140
+//  } ]
+//  del_place_state_code;
+//  @UI.lineItem: [ {
+//  position: 160 ,
+//  importance: #HIGH,
+//  label: 'Sold to Region Code'
+//  } ]
+//  @UI.identification: [ {
+//    position: 160 ,
+//    label: 'Sold to Region Code'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 160
+//  } ]
+//  sold_region_code;
+//   @UI.lineItem: [ {
+//  position: 170 ,
+//  importance: #HIGH,
+//  label: 'Delivery Number'
+//  } ]
+//  @UI.identification: [ {
+//    position: 170 ,
+//    label: 'Delivery Number'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 170
+//  } ]
+//  d_referencesddocument;
+//   @UI.lineItem: [ {
+//  position: 180 ,
+//  importance: #HIGH,
+//  label: 'Delivery Date '
+//  } ]
+//  @UI.identification: [ {
+//    position: 180 ,
+//    label: 'Delivery Date '
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 180
+//  } ]
+//  delivery_creationdate;
+//   @UI.lineItem: [ {
+//  position: 190 ,
+//  importance: #HIGH,
+//  label: 'Billing Type / Document Type'
+//  } ]
+//  @UI.identification: [ {
+//    position: 190 ,
+//    label: 'Billing Type / Document Type'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 190
+//  } ]
+//  billingdocumenttype;
+//   @UI.lineItem: [ {
+//  position: 200 ,
+//  importance: #HIGH,
+//  label: 'Billing Doc. Desc.'
+//  } ]
+//  @UI.identification: [ {
+//    position: 200 ,
+//    label: 'Billing Doc. Desc.'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 200
+//  } ]
+//  billing_doc_desc;
+//   @UI.lineItem: [ {
+//  position: 210 ,
+//  importance: #HIGH,
+//  label: 'Bill No.'
+//  } ]
+//  @UI.identification: [ {
+//    position: 210 ,
+//    label: 'Bill No.'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 210
+//  } ]
+//  Billingdocument;
+//   @UI.lineItem: [ {
+//  position: 220 ,
+//  importance: #HIGH,
+//  label: 'Inv No'
+//  } ]
+//  @UI.identification: [ {
+//    position: 220 ,
+//    label: 'Inv No'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 220
+//  } ]
+//  documentreferenceid;
+//   @UI.lineItem: [ {
+//  position: 230 ,
+//  importance: #HIGH,
+//  label: 'Inv Date'
+//  } ]
+//  @UI.identification: [ {
+//    position: 230 ,
+//    label: 'Inv Date'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 230
+//  } ]
+//  billingdocumentdate;
+//   @UI.lineItem: [ {
+//  position: 240 ,
+//  importance: #HIGH,
+//  label: 'E - way Bill Number'
+//  } ]
+//  @UI.identification: [ {
+//    position: 240 ,
+//    label: 'E - way Bill Number'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 240
+//  } ]
+//  e_way_bill_number;
+//   @UI.lineItem: [ {
+//  position: 250 ,
+//  importance: #HIGH,
+//  label: 'E way Bill Date & Time'
+//  } ]
+//  @UI.identification: [ {
+//    position: 250 ,
+//    label: 'E way Bill Date & Time'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 250
+//  } ]
+//  e_way_bill_date_time;
+//   @UI.lineItem: [ {
+//  position: 260 ,
+//  importance: #HIGH,
+//  label: 'IRN Ack Number'
+//  } ]
+//  @UI.identification: [ {
+//    position: 260 ,
+//    label: 'IRN Ack Number'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 260
+//  } ]
+//  irn_ack_number;
+//   @UI.lineItem: [ {
+//  position: 270 ,
+//  importance: #HIGH,
+//  label: 'Delivery Plant'
+//  } ]
+//  @UI.identification: [ {
+//    position: 270 ,
+//    label: 'Delivery Plant'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 270
+//  } ]
+//  del_plant;
+//
+  @UI.hidden: true
+  creationdatetime;
+}

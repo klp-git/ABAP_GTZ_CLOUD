@@ -1,0 +1,9 @@
+interface;
+define behavior for ZI_SalesForecastTP alias SalesForecast
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+}

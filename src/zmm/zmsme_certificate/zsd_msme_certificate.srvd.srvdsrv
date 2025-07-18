@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination for Msme Certificate'
+define service ZSD_MSME_CERTIFICATE {
+  expose ZD_MSMSE_CERTIFICATE;
+}

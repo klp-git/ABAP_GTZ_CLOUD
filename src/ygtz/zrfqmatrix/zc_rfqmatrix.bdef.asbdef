@@ -1,0 +1,19 @@
+projection;
+strict ( 2 );
+define behavior for ZC_RFQMATRIX alias RFQMATRIX
+use etag
+
+{
+  //use create;
+  use update;
+  //use delete;
+
+  use action createRFQData;
+  use action createRFQDataPIR;
+  use action updateRFQ;
+  use action markSupply;
+  use action deleteRFQ;
+  use action createSupplierQuote;
+  use action printComparison;
+  use action sendToSupplier;
+}

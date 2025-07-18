@@ -1,0 +1,33 @@
+projection;
+strict ( 2 );
+define behavior for ZC_advancelicenseTP alias advancelicense
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _advancelicexport { create; }
+  use association _advancelicimport { create; }
+}
+
+define behavior for ZC_advancelicexportTP alias advancelicexport
+use etag
+
+{
+  use update;
+  use delete;
+
+  use association _advancelicense;
+}
+
+define behavior for ZC_advancelicimport01TP alias advancelicimport
+use etag
+
+{
+  use update;
+  use delete;
+
+  use association _advancelicense;
+}

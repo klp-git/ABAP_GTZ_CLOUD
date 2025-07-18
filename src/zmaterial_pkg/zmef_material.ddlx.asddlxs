@@ -1,0 +1,51 @@
+@Metadata.layer: #CORE
+
+@UI: {
+  headerInfo: { typeName: 'Material',
+                typeNamePlural: 'Materials',
+                title: { type: #STANDARD, label: 'Material' }  },
+                presentationVariant: [{ sortOrder: [{ by: 'Mat', direction:  #ASC }] }] }
+
+
+annotate view ZC_DD_Mat
+    with 
+{
+    
+    @UI.facet: [ { id:              'Material',
+                 purpose:         #STANDARD,
+                 type:            #IDENTIFICATION_REFERENCE,
+                 label:           'Material',
+                 position:        10 } ]
+ 
+@UI:{ identification: [{ position: 1
+, label: 'Material' }],
+ lineItem:       [ { position: 1 } ],
+  selectionField: [ { position: 1 } ] 
+ } @Consumption.valueHelpDefinition:[ { entity:{ name:'I_PRODUCTSTDVH' , element :'Product'} }]
+ 
+  Mat;
+  
+   
+ 
+  @UI: {  lineItem:       [ { position: 25 } ],
+        identification: [ { position: 25 } ],
+        selectionField: [ { position: 25 } ] }
+  TradeName;
+ 
+  @UI: {  lineItem:       [ { position: 30 } ],
+        identification: [ { position: 30 } ],
+        selectionField: [ { position: 30 } ] }
+  TechnicalName;
+ 
+ @UI: {  lineItem:       [ { position: 40 } ],
+        identification: [ { position: 40 } ],
+        selectionField: [ { position: 40 } ] }
+  CASNumber;
+ 
+  @UI: {  lineItem:       [ { position: 50 } ],
+        identification: [ { position: 50 } ],
+        selectionField: [ { position: 50 } ] }
+  QuantityMultiple;
+ 
+ 
+}

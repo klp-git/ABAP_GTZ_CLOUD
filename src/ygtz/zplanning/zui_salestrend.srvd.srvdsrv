@@ -1,0 +1,4 @@
+@ObjectModel.leadingEntity.name: 'ZC_SalesTrendTP'
+define service ZUI_SalesTrend {
+  expose ZC_SALESTRENDTP as SalesTrend;
+}

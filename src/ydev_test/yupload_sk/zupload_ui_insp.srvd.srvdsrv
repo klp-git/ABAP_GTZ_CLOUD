@@ -1,0 +1,4 @@
+@EndUserText.label: 'service def for quality inspection'
+define service Zupload_ui_insp {
+  expose zprjv_upload_insp as Inspections;
+}

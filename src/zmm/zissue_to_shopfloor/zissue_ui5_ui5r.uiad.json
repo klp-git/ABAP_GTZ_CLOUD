@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Issue To Shopfloor",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zissuetoshopfloor"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_5D30E7FE9B4000B09B63648D223EE303AB22A763_TM",
+    "semanticObject": "zissue_so",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_5D30E7FE9B4000B09B63648D223EE303AB22A763_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Issue To Shopfloor",
+        "subtitle": "Z_ISSUESLIP"
+      }
+    }
+  ]
+}

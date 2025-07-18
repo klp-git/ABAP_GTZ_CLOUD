@@ -1,0 +1,4 @@
+@EndUserText.label: 'material_against_process'
+define service Zsrv_material_against_process {
+  expose zcds_material_consumption;
+}

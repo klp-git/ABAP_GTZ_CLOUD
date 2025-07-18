@@ -1,0 +1,4 @@
+@EndUserText.label: 'test pdf srv'
+define service Zpdf_srv {
+  expose ZPDFResponseEntity;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination of purchaselines'
+define service Zsd_purchaselines {
+  expose ZDD_PURCHASELINES;
+}

@@ -1,0 +1,4 @@
+@ObjectModel.leadingEntity.name: 'ZC_IntegrationTP'
+define service ZUI_Integration {
+  expose ZC_INTEGRATIONTP as Integration;
+}

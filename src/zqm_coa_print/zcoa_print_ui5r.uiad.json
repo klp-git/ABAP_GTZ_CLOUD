@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "COA PRINT",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zcoa"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_AC26D8A35D1C09321B076319512279AF500248B5_TM",
+    "semanticObject": "zcoa_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_AC26D8A35D1C09321B076319512279AF500248B5_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "COA PRINT",
+        "subtitle": "ZQMCOA"
+      }
+    }
+  ]
+}

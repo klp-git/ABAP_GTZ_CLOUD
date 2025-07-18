@@ -1,0 +1,106 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+  title: { type: #STANDARD, value: 'GLAccount' },
+  description: { type: #STANDARD, value: 'Narration' }
+}
+annotate entity ZC_SALARYINTPOST with {
+
+   @UI.facet: [{
+    label: 'General Information', 
+    id: 'GeneralInfo1', 
+    purpose: #STANDARD, 
+    position: 10, 
+    type: #IDENTIFICATION_REFERENCE
+  }]
+
+  @EndUserText.label: 'Profit Center'
+  @UI.identification: [ { position: 40 } ]
+  @UI.lineItem:       [ { position: 40 } ]
+  @UI.selectionField: [ { position: 10 } ]
+  ProfitCenter;
+
+  @EndUserText.label: 'Cost Center'
+  @UI.identification: [{ position: 50 }]
+  @UI.lineItem:       [{ position: 50 }]
+  @UI.selectionField: [{ position: 20 }]
+  CostCenter;
+
+  @EndUserText.label: 'GLAccount'
+  @UI.identification: [{ position: 60 }]
+  @UI.lineItem:       [{ position: 60 }]
+  @UI.selectionField: [{ position: 30 }]
+  GLAccount;
+
+  @EndUserText.label: 'Pay Month'
+  @UI.identification: [{ position: 70 }]
+  @UI.lineItem:       [{ position: 70 }]
+  PayMonth;
+
+  @EndUserText.label: 'Business Place'
+  @UI.identification: [{ position: 80 }]
+  @UI.lineItem:       [{ position: 80 }]
+  BusinessPlace;
+
+  @EndUserText.label: 'Branch'
+  @UI.identification: [{ position: 90 }]
+  @UI.lineItem:       [{ position: 90 }]
+  Branch;
+
+  @EndUserText.label: 'CompanyCode'
+  @UI.identification: [{ position: 100 }]
+  @UI.lineItem:       [{ position: 100 }]
+  @UI.selectionField: [{ position: 60 }]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCodeSTDVH', element: 'CompanyCode' } }]
+  CompanyCode;
+
+  @EndUserText.label: 'Posting Date'
+  @UI.identification: [{ position: 110 }]
+  @UI.lineItem:       [{ position: 110 }]
+  PostingDate;
+
+  @EndUserText.label: 'Narration'
+  @UI.identification: [{ position: 120 }]
+  @UI.lineItem:       [{ position: 120 }]
+  Narration;
+
+  @EndUserText.label: 'Accounting Document'
+  @UI.identification: [{ position: 10 }]
+  @UI.lineItem:       [{ position: 10 }]
+  AccountingDocument;
+
+  @EndUserText.label: 'Debit Amount'
+  @UI.identification: [{ position: 130 }]
+  @UI.lineItem:       [{ position: 130 }]
+  Debit;
+
+  @EndUserText.label: 'Credit Amount'
+  @UI.identification: [{ position: 140 }]
+  @UI.lineItem:       [{ position: 140 }]
+  Credit;
+
+  @EndUserText.label: 'Currency'
+  @UI.identification: [{ position: 150 }]
+  @UI.lineItem:       [{ position: 150 }]
+  Currency;
+
+  @EndUserText.label: 'Error Log'
+  @UI.identification: [{ position: 160 }]
+  @UI.lineItem:       [{ position: 160 }]
+  Errorlog;
+
+  @EndUserText.label: 'Created By'
+  @UI.identification: [{ position: 170 }]
+  @UI.lineItem:       [{ position: 170 }]
+  CreatedBy;
+
+  @EndUserText.label: 'Created At'
+  @UI.identification: [{ position: 180 }]
+  @UI.lineItem:       [{ position: 180 }]
+  CreatedAt;
+
+  @UI.hidden: true
+  LastChangedBy;
+
+  @UI.hidden: true
+  LastChangedAt;
+}

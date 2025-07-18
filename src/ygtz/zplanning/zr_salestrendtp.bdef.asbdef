@@ -1,0 +1,47 @@
+managed;
+strict ( 2 );
+define behavior for ZR_SalesTrendTP alias SalesTrend
+implementation in class ZBP_R_SalesTrendTP unique
+persistent table ZSALESTREND
+etag master LastChangedAt
+lock master
+authorization master( global )
+
+{
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LocalLastChangedAt,
+   Productdesc,
+   Quantityunit;
+
+  field ( readonly : update )
+   Bukrs,
+   Plant,
+   Trendmonth,
+   Productcode;
+
+  create;
+  update;
+  delete;
+
+  determination updateValues on save { field Productcode, Plant, Trendmonth; }
+
+  mapping for ZSALESTREND
+  {
+    Bukrs = BUKRS;
+    Plant = PLANT;
+    Trendmonth = TRENDMONTH;
+    Productcode = PRODUCTCODE;
+    Productdesc = PRODUCTDESC;
+    Quantityunit = QUANTITYUNIT;
+    Trenddate = TRENDDATE;
+    Salesqty = SALESQTY;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+}

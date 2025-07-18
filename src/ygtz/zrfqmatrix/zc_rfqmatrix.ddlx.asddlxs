@@ -1,0 +1,296 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'RFQMatrix', 
+    typeNamePlural: 'RFQMatrix', 
+    title: {
+      type: #STANDARD, 
+      label: 'RFQ Matrix', 
+      value: 'Requestforquotation'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Requestforquotation', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZC_RFQMatrix with
+{
+  @UI.facet: [ {
+    id: 'idCollection', 
+    type: #COLLECTION, 
+    label: 'RFQ Matrix', 
+    position: 10 
+  }, 
+  {
+    id: 'idIdentification', 
+    parentId: 'idCollection', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'General Information', 
+    position: 10 
+  } ]
+  
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #HIGH, 
+    label: 'Request for quotation'
+  },
+    {  type: #FOR_ACTION, dataAction: 'createRFQData', label: 'Generate RFQ Data' },
+    {  type: #FOR_ACTION, dataAction: 'createRFQDataPIR', label: 'Generate RFQ Data (PIR)' },
+    {  type: #FOR_ACTION, dataAction: 'updateRFQ', label: 'Update Bidders' },
+    {  type: #FOR_ACTION, dataAction: 'publishRFQ', label: 'Publish RFQ' },
+    {  type: #FOR_ACTION, dataAction: 'markSupply', label: 'Mark Supply', invocationGrouping: #CHANGE_SET }
+   ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Request for quotation'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+//  @Consumption.valueHelpDefinition: [{entity: {name: 'ZR_RFQ_VH', element: 'RequestForQuotation' }}]  
+  Requestforquotation;
+  
+  @UI.lineItem: [ {
+    position: 15 , 
+    importance: #HIGH, 
+    label: 'Product Code'
+  } ]
+  @UI.identification: [ {
+    position: 15 , 
+    label: 'Product Code'
+  } ]
+  @UI.selectionField: [ {
+    position: 15 
+  } ]
+  Productcode;
+  
+  @UI.lineItem: [ {
+    position: 20 , 
+    importance: #HIGH, 
+    label: 'Product Name'
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Product Name'
+  } ]
+  Productdesc; 
+   
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'Product Trade Name'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Product Trade Name'
+  } ]
+  Producttradename;
+  
+  @UI.lineItem: [ {
+    position: 40 , 
+    importance: #HIGH, 
+    label: 'Remarks'
+  } ]
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Remarks'
+  } ]
+  @UI.hidden: true
+  Remarks;
+  
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH, 
+    label: 'Supply'
+  }, { type: #FOR_ACTION, dataAction: 'deleteRFQ', label: 'Delete RFQ' } 
+  , { type: #FOR_ACTION, dataAction: 'createSupplierQuote', label: 'Create Supplier Quote' }
+  , { type: #FOR_ACTION, dataAction: 'printComparison', label: 'Print Comparison' } 
+  , { type: #FOR_ACTION, dataAction: 'sendToSupplier', label: 'Send to Supplier' }]
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Supply'
+  }, { type: #FOR_ACTION, dataAction: 'deleteRFQ', label: 'Delete RFQ' }
+  , { type: #FOR_ACTION, dataAction: 'createSupplierQuote', label: 'Create Supplier Quote' }
+  , { type: #FOR_ACTION, dataAction: 'printComparison', label: 'Print Comparison' } 
+  , { type: #FOR_ACTION, dataAction: 'sendToSupplier', label: 'Send to Supplier' } ]
+  Supply;
+  
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 55 , 
+    importance: #HIGH, 
+    label: 'Company Code'
+  } ]
+  @UI.identification: [ {
+    position: 55 , 
+    label: 'Company Code'
+  } ]
+  Bukrs;
+  
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 58 , 
+    importance: #HIGH, 
+    label: 'Supplierquotationitem'
+  } ]
+  @UI.identification: [ {
+    position: 58 , 
+    label: 'Supplierquotationitem'
+  } ]
+  Supplierquotationitem;
+  
+  @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH, 
+    label: 'Vendor Code'
+  } ]
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Vendor Code'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Vendorcode;
+  
+  @UI.lineItem: [ {
+    position: 70 , 
+    importance: #HIGH, 
+    label: 'Vendor Name'
+  } ]
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Vendor Name'
+  } ]
+  Vendorname;
+  
+  
+  @UI.lineItem: [ {
+    position: 90 , 
+    importance: #HIGH, 
+    label: 'Order Quantity'
+  } ]
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Order Quantity'
+  } ]
+  Orderquantity;
+  
+  @UI.lineItem: [ {
+    position: 100 , 
+    importance: #HIGH, 
+    label: 'Order Unit'
+  } ]
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Order Unit'
+  } ]
+  Orderquantityunit;
+  
+  @UI.lineItem: [ {
+    position: 110 , 
+    importance: #HIGH, 
+    label: 'Vendor Type'
+  } ]
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Vendor Type'
+  } ]
+  Vendortype;
+  
+  @UI.lineItem: [ {
+    position: 120 , 
+    importance: #HIGH, 
+    label: 'Major Activity'
+  } ]
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'Major Activity'
+  } ]
+  Majoractivity;
+  
+  @UI.lineItem: [ {
+    position: 130 , 
+    importance: #HIGH, 
+    label: 'Type of Enterprise'
+  } ]
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Type of Enterprise'
+  } ]
+  @UI.hidden: true
+  Typeofenterprise;
+  
+  @UI.lineItem: [ {
+    position: 140 , 
+    importance: #HIGH, 
+    label: 'Udyam Aadhar No'
+  } ]
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'Udyam Aadhar No'
+  } ]
+  Udyamaadharno;
+  
+  @UI.lineItem: [ {
+    position: 150 , 
+    importance: #HIGH, 
+    label: 'Udyam Certificate Date'
+  } ]
+  @UI.identification: [ {
+    position: 150 , 
+    label: 'Udyam Certificate Date'
+  } ]
+  Udyamcertificatedate;
+  
+  @UI.lineItem: [ {
+    position: 160 , 
+    importance: #HIGH, 
+    label: 'Udyam Certificate Receiving Date'
+  } ]
+  @UI.identification: [ {
+    position: 160 , 
+    label: 'Udyam Certificate Receiving Date'
+  } ]
+  Udyamcertificatereceivingdate;
+  
+  @UI.lineItem: [ {
+    position: 170 , 
+    importance: #HIGH, 
+    label: 'Vendor Special Name'
+  } ]
+  @UI.identification: [ {
+    position: 170 , 
+    label: 'Vendor Special Name'
+  } ]
+  Vendorspecialname;
+  
+  
+  @UI.hidden: true
+  CreatedBy;
+  
+  @UI.hidden: true
+  CreatedAt;
+  
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 210 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 210 
+  } ]
+  LastChangedBy;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

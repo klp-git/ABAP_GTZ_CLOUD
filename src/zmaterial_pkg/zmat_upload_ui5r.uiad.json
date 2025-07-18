@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Excel Data Upload",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "dataupload"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_BE7860BBE75A7B85EB0874237B871AC9194F37DE_TM",
+    "semanticObject": "zmat_upload",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_BE7860BBE75A7B85EB0874237B871AC9194F37DE_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Excel Data Upload",
+        "subtitle": "Material Trade Data Upload"
+      }
+    }
+  ]
+}

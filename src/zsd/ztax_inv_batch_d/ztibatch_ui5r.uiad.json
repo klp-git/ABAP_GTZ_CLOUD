@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Tax Invoice Batch",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "ztibatch.ztibatch"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_32AF0DFA40170748F81EAA90F85B576FEC53F4AB_TM",
+    "semanticObject": "ztibatch_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_32AF0DFA40170748F81EAA90F85B576FEC53F4AB_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Tax Invoice Batch",
+        "subtitle": "ZTAX_BATCH"
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "zpo_import",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "purord1"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_13DAF90ACE1017D54BB18881095D5790D35C1D2C_TM",
+    "semanticObject": "zpo_import_so",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_13DAF90ACE1017D54BB18881095D5790D35C1D2C_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "zpo_import",
+        "subtitle": "zpo_import_print"
+      }
+    }
+  ]
+}

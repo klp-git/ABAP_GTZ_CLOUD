@@ -1,0 +1,4 @@
+@EndUserText.label: 'service definition issue'
+define service Zsrv_issue {
+  expose zcds_issue_to_shopfloor;
+}

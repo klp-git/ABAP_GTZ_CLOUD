@@ -1,0 +1,4 @@
+@ObjectModel.leadingEntity.name: 'ZC_SalesForecastTP'
+define service ZUI_SalesForecast {
+  expose ZC_SALESFORECASTTP as SalesForecast;
+}

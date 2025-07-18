@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination'
+define service Zsd_purchase_requisition {
+  expose ZDD_PURCHASE_REQUISITION;
+}

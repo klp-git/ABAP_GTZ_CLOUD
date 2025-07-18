@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZSB_PLANTTAX_INV_BATCH_D'
+define service ZSB_PLANTTAX_INV_BATCH_D {
+  expose ZCDS_plant_TAX_INV_BATCH_D;
+}

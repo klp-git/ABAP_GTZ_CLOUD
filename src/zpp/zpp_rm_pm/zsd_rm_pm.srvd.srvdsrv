@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination For RM & PM'
+define service Zsd_rm_pm {
+  expose zdd_rm_pm;
+}

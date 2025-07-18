@@ -1,0 +1,4 @@
+@ObjectModel.leadingEntity.name: 'ZC_PRPlanningTP'
+define service ZUI_PRPlanning {
+  expose ZC_PRPLANNINGTP as PRPlanning;
+}

@@ -1,0 +1,9 @@
+projection;
+strict ( 2 );
+
+define behavior for zprjv_upload_insp alias Inspection
+{
+  use create;
+  use update;
+  use delete;
+}

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "ZWORKS_ORDER",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "worksorder"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_90D39979CB22DB1B0EFABAA9F896D2ECA7808F08_TM",
+    "semanticObject": "works_order",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_90D39979CB22DB1B0EFABAA9F896D2ECA7808F08_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZWORKS_ORDER",
+        "subtitle": "ZWO"
+      }
+    }
+  ]
+}

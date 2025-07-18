@@ -1,0 +1,4 @@
+@EndUserText.label: 'service defination for coa'
+define service Zservice_def_coa {
+  expose zdd_coa;
+}

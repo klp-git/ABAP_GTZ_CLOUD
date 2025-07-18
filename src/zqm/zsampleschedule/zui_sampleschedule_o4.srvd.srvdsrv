@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_SAMPLESCHEDULE'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_SAMPLESCHEDULE'
+  }
+}
+define service ZUI_SAMPLESCHEDULE_O4 provider contracts odata_v4_ui {
+  expose ZC_SAMPLESCHEDULE;
+}

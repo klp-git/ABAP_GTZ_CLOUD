@@ -1,0 +1,67 @@
+managed;
+strict ( 2 );
+define behavior for ZR_PRPlanningTP alias PRPlanning
+implementation in class ZBP_R_PRPlanningTP unique
+persistent table zprplanning
+etag master LastChangedAt
+lock master
+authorization master ( global )
+
+{
+  field ( readonly )
+  CreatedBy,
+  CreatedAt,
+  LastChangedAt,
+  LocalLastChangedAt,
+  Productdesc,
+  Quantityunit,
+  Planningdate,
+  Minimumqty,
+  Maximumqty,
+  Salestrendqty,
+  Forecastqty,
+  Salesorderqty,
+  Suggestedqty,
+  Closed;
+
+  field ( readonly : update )
+  Bukrs,
+  Plant,
+  Planningmonth,
+  Productcode;
+
+
+  //  internal create;
+  create;
+  update;
+  delete;
+
+  static action createPlanningData parameter Z_I_PLANPARM result [1] $self;
+  //  action( features : instance ) deletePlanData    result [1] $self;
+  static action deletePlanData parameter Z_I_PLANPARM result [1] $self;
+  mapping for zprplanning
+    {
+      Bukrs              = BUKRS;
+      Plant              = PLANT;
+      Planningmonth      = PLANNINGMONTH;
+      Productcode        = PRODUCTCODE;
+      Productdesc        = PRODUCTDESC;
+      Quantityunit       = QUANTITYUNIT;
+      Planningdate       = PLANNINGDATE;
+      Minimumqty         = MINIMUMQTY;
+      Maximumqty         = MAXIMUMQTY;
+      Salestrendqty      = SALESTRENDQTY;
+      Forecastqty        = FORECASTQTY;
+      Salesorderqty      = SALESORDERQTY;
+      Suggestedqty       = SUGGESTEDQTY;
+      Overrideqty        = OVERRIDEQTY;
+      opensalesorderqty  = opensalesorderqty;
+      Remarks            = REMARKS;
+      Closed             = CLOSED;
+      CreatedBy          = CREATED_BY;
+      CreatedAt          = CREATED_AT;
+      LastChangedBy      = LAST_CHANGED_BY;
+      LastChangedAt      = LAST_CHANGED_AT;
+      LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    }
+}

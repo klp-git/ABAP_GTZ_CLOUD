@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Advance Licenses",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "advlic"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_2AC1E52A3F1A1ABC6321B41958D712AD46E53486_TM",
+    "semanticObject": "zadv_so",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_2AC1E52A3F1A1ABC6321B41958D712AD46E53486_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Advance Licenses",
+        "subtitle": "ZADV"
+      }
+    }
+  ]
+}

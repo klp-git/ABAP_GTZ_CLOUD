@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "RFQ Print",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zmmrfqprint"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_C9F1D8BF8040571F71277605F36B9398C07B47C6_TM",
+    "semanticObject": "zrfq_print_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_C9F1D8BF8040571F71277605F36B9398C07B47C6_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "RFQ Print",
+        "subtitle": "zmm_rfq"
+      }
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+managed;
+strict ( 2 );
+
+define behavior for ZR_advancelicenseTP alias advancelicense
+implementation in class ZBP_R_advancelicenseTP unique
+persistent table ZADVLIC
+etag master LastChangedAt
+lock master //total etag LocalLastChangedAt
+authorization master( global )
+{
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LocalLastChangedAt,
+   Importcifininr,
+   Exportfobininr;
+
+
+  field ( readonly : update )
+   Bukrs,
+   Advancelic;
+
+
+  create;
+  update;
+  delete;
+  determination calcuateINRValue on modify { field Importexchangerate, Exportexchangerate, Importcifinfc, Exportfobinfc; }
+
+  mapping for ZADVLIC
+  {
+    Bukrs = BUKRS;
+    Advancelic = ADVANCELIC;
+    Licdate = LICDATE;
+    Fileno = FILENO;
+    Importvalidupto = IMPORTVALIDUPTO;
+    Exportvalidupto = EXPORTVALIDUPTO;
+    Customsbondno = CUSTOMSBONDNO;
+    Bonddate = BONDDATE;
+    Currencycode = CURRENCYCODE;
+    Importexchangerate = IMPORTEXCHANGERATE;
+    Exportexchangerate = EXPORTEXCHANGERATE;
+    Importcifinfc = IMPORTCIFINFC;
+    Exportfobinfc = EXPORTFOBINFC;
+    Totalexportqty = TOTALEXPORTQTY;
+    Valueadditionperc = VALUEADDITIONPERC;
+    Importcifininr = IMPORTCIFININR;
+    Exportfobininr = EXPORTFOBININR;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _advancelicexport { create; }
+  association _advancelicimport { create; }
+}
+
+define behavior for ZR_advancelicexportTP alias advancelicexport
+implementation in class ZBP_R_advancelicexportTP unique
+persistent table ZADVLICEXPORT
+early numbering
+etag master LocalLastChangedAt
+lock dependent by _advancelicense
+authorization dependent by _advancelicense
+
+{
+  field ( readonly )
+   Bukrs,
+   Advancelic,
+   LastChangedAt,
+   Soqty,
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LocalLastChangedAt;
+//   Fobvalueinr;
+
+  field ( readonly )
+   Advancelicitemno;
+
+  field ( readonly : update )
+   Productcode;
+
+  update;
+  delete;
+  determination CalculateFOBValueINR on modify { field Fobvalue; }
+  determination ExportQtyAdd on modify { field Licenseqty; }
+
+  mapping for ZADVLICEXPORT
+  {
+    Bukrs = BUKRS;
+    Advancelic = ADVANCELIC;
+    Advancelicitemno = ADVANCELICITEMNO;
+    Productcode = PRODUCTCODE;
+    Productdesc = PRODUCTDESC;
+    Hscode = HSCODE;
+    Quantityunit = QUANTITYUNIT;
+    Licenseqty = LICENSEQTY;
+    Fobvalue = FOBVALUE;
+    Fobvalueinr = FOBVALUEINR;
+    Soqty = SOQTY;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _advancelicense;
+}
+
+define behavior for ZR_advancelicimport01TP alias advancelicimport
+implementation in class ZBP_R_advancelicimport01TP unique
+persistent table ZADVLICIMPORT
+early numbering
+etag master LocalLastChangedAt
+lock dependent by _advancelicense
+authorization dependent by _advancelicense
+
+{
+  field ( readonly )
+   Bukrs,
+   Advancelic,
+   LastChangedAt,
+   Poqty,
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LocalLastChangedAt;
+   //CifValueInr;
+
+  field ( readonly )
+   Advancelicitemno;
+
+  field ( readonly : update )
+   Productcode;
+
+
+  update;
+  delete;
+  determination CalculateCIFValueINR on modify { field Cifvalue; }
+  determination CalculateCIFValueINRSave on save { field Cifvalue; }
+
+  mapping for ZADVLICIMPORT
+  {
+    Bukrs = BUKRS;
+    Advancelic = ADVANCELIC;
+    Advancelicitemno = ADVANCELICITEMNO;
+    Productcode = PRODUCTCODE;
+    Productdesc = PRODUCTDESC;
+    Hscode = HSCODE;
+    Quantityunit = QUANTITYUNIT;
+    Licenseqty = LICENSEQTY;
+    Cifvalue = CIFVALUE;
+    Cifvalueinr = CIFVALUEINR;
+    Poqty = POQTY;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+  association _advancelicense;
+}

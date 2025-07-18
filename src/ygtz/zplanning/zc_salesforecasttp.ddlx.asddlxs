@@ -1,0 +1,171 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'SalesForecast',
+    typeNamePlural: 'SalesForecasts',
+    title: {
+      type: #STANDARD,
+      label: 'Sales Forecast',
+      value: 'Bukrs'
+    }
+  },
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Bukrs',
+      direction: #DESC
+    } ],
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZC_SalesForecastTP with
+{
+  @UI.facet: [ {
+    id: 'idCollection',
+    type: #COLLECTION,
+    label: 'Sales Forecast',
+    position: 10
+  },
+  {
+    id: 'idIdentification',
+    parentId: 'idCollection',
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'General Information',
+    position: 10
+  } ]
+    @UI.lineItem: [ {
+      position: 10 ,
+      importance: #HIGH,
+      label: 'Company Code'
+    } ]
+    @UI.identification: [ {
+      position: 10 ,
+      label: 'Company'
+    } ]
+    @UI.selectionField: [ {
+      position: 10
+    } ]
+//    @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCodeVH', element: 'CompanyCode' } }]
+    Bukrs;
+
+  @UI.lineItem: [ {
+    position: 20 ,
+    importance: #HIGH,
+    label: 'Plant'
+  } ]
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'Plant'
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+//  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_PlantStdVH', element: 'Plant' } }]
+  Plant;
+
+  @UI.lineItem: [ {
+    position: 30 ,
+    importance: #HIGH,
+    label: 'Forecast Month'
+  } ]
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'Forecast Month'
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  @EndUserText: {
+      label: 'Forecast Month'
+  }
+  Forecastmonth;
+
+  @UI.lineItem: [ {
+    position: 40 ,
+    importance: #HIGH,
+    label: 'Product Code'
+  } ]
+  @UI.identification: [ {
+    position: 40 ,
+    label: 'Product Code'
+  } ]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+//  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZR_Product_VH', element: 'Product' },
+//                                        additionalBinding: [{ localElement: 'Productdesc',
+//                                                              element: 'ProductDescription' }]
+//                                    }]
+  @EndUserText: {
+      label: 'Product Code'
+  }
+  Productcode;
+
+  @UI.lineItem: [ {
+    position: 50 ,
+    importance: #HIGH,
+    label: 'Product Name'
+  } ]
+  @UI.identification: [ {
+    position: 50 ,
+    label: 'Product Name'
+  } ]
+  Productdesc;
+
+  @UI.lineItem: [ {
+    position: 60 ,
+    importance: #HIGH,
+    label: 'UOM'
+  } ]
+  @UI.identification: [ {
+    position: 60 ,
+    label: 'UOM'
+  } ]
+  Quantityunit;
+
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 70 ,
+    importance: #HIGH,
+    label: 'Forecast Date'
+  } ]
+  @UI.identification: [ {
+    position: 70 ,
+    label: 'Forecast Date'
+  } ]
+  Forecastdate;
+
+  @UI.lineItem: [ {
+    position: 80 ,
+    importance: #HIGH,
+    label: 'Forecast Qty'
+  } ]
+  @UI.identification: [ {
+    position: 80 ,
+    label: 'Forecast Qty'
+  } ]
+  Forecastqty;
+
+  @UI.hidden: true
+  CreatedBy;
+
+  @UI.hidden: true
+  CreatedAt;
+
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 110 ,
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 110
+  } ]
+  LastChangedBy;
+
+  @UI.hidden: true
+  LastChangedAt;
+
+  @UI.hidden: true
+  LocalLastChangedAt;
+}

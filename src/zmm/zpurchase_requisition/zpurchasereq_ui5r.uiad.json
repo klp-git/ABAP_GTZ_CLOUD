@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Purchase Requisition",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zpurchasereq.zpurchasereq"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_7A61CF4FC5EFD4E3F89697324E0D7EA02C05298D_TM",
+    "semanticObject": "zpurchasereq_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_7A61CF4FC5EFD4E3F89697324E0D7EA02C05298D_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Purchase Requisition",
+        "subtitle": "zpur_req"
+      }
+    }
+  ]
+}

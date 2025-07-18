@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Sticker Print'
+define service Zsrv_sticker_print {
+  expose zpp_sticker_print_cds as cardstickerf4;
+}

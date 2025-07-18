@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Production Memo",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zmemodetail"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A0F22EA54C5BEF8112F384298631F8478F5C399C_TM",
+    "semanticObject": "zmemo_detail_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A0F22EA54C5BEF8112F384298631F8478F5C399C_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Production Memo",
+        "subtitle": "z_memo"
+      }
+    }
+  ]
+}

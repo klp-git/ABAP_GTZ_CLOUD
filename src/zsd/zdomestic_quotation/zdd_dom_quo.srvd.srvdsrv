@@ -1,0 +1,4 @@
+@EndUserText.label: 'Data Defination Of Domestic Quotation'
+define service Zdd_dom_quo {
+  expose zdd_dom_quo;
+}

@@ -1,0 +1,70 @@
+managed;
+strict ( 2 );
+define behavior for ZR_RFQMATRIX alias RFQMATRIX
+implementation in class ZBP_R_RFQMATRIX unique
+persistent table ZRFQMATRIX
+etag master LastChangedAt
+lock master
+authorization master( global )
+
+{
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Bukrs,
+   Requestforquotation,
+   Vendorcode,
+   Productcode,
+   Supplierquotationitem,
+   Scheduleline;
+
+
+  internal create;
+  update;
+  delete;
+
+  action( features : instance ) deleteRFQ    result [1] $self;
+  static action createRFQData parameter Z_I_RFQPARM result [1] $self;
+  static action createRFQDataPIR parameter Z_I_RFQPARM result [1] $self;
+  action( features : instance ) updateRFQ    result [1] $self;
+  action( features : instance ) publishRFQ    result [1] $self;
+  action markSupply;
+  action( features : instance ) createSupplierQuote    result [1] $self;
+
+  action( features : instance ) printComparison    result [1] $self;
+  action sendToSupplier;
+
+  mapping for ZRFQMATRIX
+  {
+    Bukrs = BUKRS;
+    Requestforquotation = REQUESTFORQUOTATION;
+    Vendorcode = VENDORCODE;
+    Productcode = PRODUCTCODE;
+    Scheduleline = SCHEDULELINE;
+    Supplierquotationitem = SUPPLIERQUOTATIONITEM;
+    Vendorname = VENDORNAME;
+    Productdesc = PRODUCTDESC;
+    Producttradename = PRODUCTTRADENAME;
+    Remarks = REMARKS;
+    Orderquantity = ORDERQUANTITY;
+    Orderquantityunit = ORDERQUANTITYUNIT;
+    Vendortype = VENDORTYPE;
+    Majoractivity = MAJORACTIVITY;
+    Typeofenterprise = TYPEOFENTERPRISE;
+    Udyamaadharno = UDYAMAADHARNO;
+    Udyamcertificatedate = UDYAMCERTIFICATEDATE;
+    Udyamcertificatereceivingdate = UDYAMCERTIFICATERECEIVINGDATE;
+    Vendorspecialname = VENDORSPECIALNAME;
+    Supply = SUPPLY;
+    Processed = PROCESSED;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+}

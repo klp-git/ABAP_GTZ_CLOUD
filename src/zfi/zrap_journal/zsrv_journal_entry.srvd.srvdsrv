@@ -1,0 +1,4 @@
+@EndUserText.label: 'service defination for journal entry'
+define service Zsrv_Journal_Entry {
+  expose zcds_Journal_Entry_r;
+}

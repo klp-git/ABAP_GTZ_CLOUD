@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Finished Goods List",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zfgschedule"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_DF3F6DAF1FCB85DBD8BD5DA391507D31BBB56479_TM",
+    "semanticObject": "zfg_schedule_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_DF3F6DAF1FCB85DBD8BD5DA391507D31BBB56479_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Finished Goods List",
+        "subtitle": "ZPP_FG DISPATCH SCHEDULE"
+      }
+    }
+  ]
+}

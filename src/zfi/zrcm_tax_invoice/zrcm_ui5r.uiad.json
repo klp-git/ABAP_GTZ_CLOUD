@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "RCM Tax Invoice",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "rcm"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_B1AAB84D7BD17C0AE4C893A429664D838EAAFF6B_TM",
+    "semanticObject": "zrcm_tax_invoice",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_B1AAB84D7BD17C0AE4C893A429664D838EAAFF6B_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "RCM Tax Invoice"
+      }
+    }
+  ]
+}

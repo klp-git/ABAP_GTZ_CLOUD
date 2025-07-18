@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Sample Schedule",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zsampleschedulev01"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_5DA6EF66D6207F7E0F90CE3AB6A8EB084AB7EB4C_TM",
+    "semanticObject": "zso_sample_schedule",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_5DA6EF66D6207F7E0F90CE3AB6A8EB084AB7EB4C_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sample Schedule",
+        "subtitle": "zsample_schedule"
+      }
+    }
+  ]
+}

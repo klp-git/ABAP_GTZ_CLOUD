@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Average Sales Trend",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "avgsalestrend"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_120FCD8A4655BE538C188C38133E29E97816C75E_TM",
+    "semanticObject": "zavg_st_so",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_120FCD8A4655BE538C188C38133E29E97816C75E_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Average Sales Trend",
+        "subtitle": "zst_upload"
+      }
+    }
+  ]
+}

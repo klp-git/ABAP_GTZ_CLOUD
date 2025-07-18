@@ -1,0 +1,17 @@
+projection implementation in class ZAPPBP_C_TABLE_PLANTAPP unique;
+strict ( 2 );
+use draft;
+define behavior for ZAPPC_TABLE_PLANTAPP alias ZappcTablePlantapp
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+}

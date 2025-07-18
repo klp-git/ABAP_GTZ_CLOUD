@@ -1,0 +1,5 @@
+@EndUserText.label: 'service defintion for temp store'
+define service Ztemp_db_sd {
+  expose zform_hdr_tab_p;
+  expose zform_att_tab_p;
+}

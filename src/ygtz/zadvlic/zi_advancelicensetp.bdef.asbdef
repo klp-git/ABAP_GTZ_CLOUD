@@ -1,0 +1,32 @@
+interface;
+define behavior for ZI_advancelicenseTP alias advancelicense
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _advancelicexport { create; }
+  use association _advancelicimport { create; }
+}
+
+define behavior for ZI_advancelicexportTP alias advancelicexport
+use etag
+
+{
+  use update;
+  use delete;
+
+  use association _advancelicense;
+}
+
+define behavior for ZI_advancelicimport01TP alias advancelicimport
+use etag
+
+{
+  use update;
+  use delete;
+
+  use association _advancelicense;
+}

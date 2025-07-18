@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Voucher Print",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "voucherprint"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_69C33F4E593C8708C4EC873B4409F773D40E0918_TM",
+    "semanticObject": "voucherprint_so",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_69C33F4E593C8708C4EC873B4409F773D40E0918_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Voucher Print",
+        "subtitle": "ZVP"
+      }
+    }
+  ]
+}

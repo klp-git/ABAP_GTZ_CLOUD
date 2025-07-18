@@ -1,0 +1,4 @@
+@EndUserText.label: 'service defination for export quotation'
+define service Zsrv_def_eq {
+  expose zcds_export_quotation;
+}

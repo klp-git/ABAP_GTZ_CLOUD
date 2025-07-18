@@ -1,0 +1,121 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Domestic Quotation',
+    typeNamePlural: 'Domestic Quotation',
+    title: {
+      type: #STANDARD,
+      label: 'ZDQ',
+      value: 'SalesQuotation'
+    }
+  },
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'SalesQuotation',
+      direction: #DESC
+    } ],
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view zdd_dom_quo with
+{
+  @UI.facet: [ {
+  id: 'idCollection',
+  type: #COLLECTION,
+  label: 'Domestic Quotation',
+  position: 10,
+  purpose: #STANDARD
+  },
+  {
+  id: 'idIdentification',
+  parentId: 'idCollection',
+  type: #IDENTIFICATION_REFERENCE,
+  label: 'General Information',
+  position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    importance: #HIGH,
+    label: 'Sales Quotation'
+  }
+  ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Sales Quotation'
+  }
+  ]
+  @UI.selectionField: [{
+  position: 10
+   }]
+  SalesQuotation;
+  @UI.lineItem: [ {
+    position: 20 ,
+    importance: #HIGH,
+    label: 'Sales Quotation Type'
+  }
+  ]
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'Sales Quotation Type'
+  }
+  ]
+  @UI.selectionField: [{
+  position: 20
+  }]
+  SalesQuotationType;
+  @UI.lineItem: [ {
+    position: 30 ,
+    importance: #HIGH,
+    label: 'Distribution Channel'
+  }
+  ]
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'Distribution Channel'
+  }
+  ]
+  @UI.selectionField: [{
+  position: 30
+  }]
+  DistributionChannel;
+  @UI.lineItem: [ {
+    position: 40 ,
+    importance: #HIGH,
+    label: 'Creation Date'
+  }
+  ]
+  @UI.identification: [ {
+    position: 40 ,
+    label: 'Creation Date'
+  }
+  ]
+  CreationDate;
+  @UI.lineItem: [ {
+    position: 50 ,
+    importance: #HIGH,
+    label: 'Sold To Party'
+  }
+  ]
+  @UI.identification: [ {
+    position: 50 ,
+    label: 'Sold To Party'
+  }
+  ]
+  SoldToParty;
+
+  @UI.lineItem: [ {
+    position: 60 ,
+    importance: #HIGH,
+    label: 'Customer Name'
+  }
+  ]
+  @UI.identification: [ {
+    position: 60 ,
+    label: 'Customer Name'
+  }
+  ]
+  CustomerName;
+
+}

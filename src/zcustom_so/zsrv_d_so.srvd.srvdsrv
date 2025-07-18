@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition of SO'
+define service Zsrv_d_so {
+  expose ZCDS_DD_SO;
+}

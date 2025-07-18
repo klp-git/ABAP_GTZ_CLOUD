@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Material Consumption",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zmaterialconsumption"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_7AA011F0A3420F203436AC65324090F16704DA93_TM",
+    "semanticObject": "zmat_consume",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_7AA011F0A3420F203436AC65324090F16704DA93_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Material Consumption",
+        "subtitle": "Z_PROD_CONSUMPTION"
+      }
+    }
+  ]
+}

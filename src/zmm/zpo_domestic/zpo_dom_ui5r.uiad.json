@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Purchase Order Domestic",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zpodom"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_637D56C8852274FCD852F918A5B5FFD358528CC1_TM",
+    "semanticObject": "zpo_dom_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_637D56C8852274FCD852F918A5B5FFD358528CC1_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Purchase Order Domestic",
+        "subtitle": "ZPO_DOM"
+      }
+    }
+  ]
+}

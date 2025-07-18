@@ -1,0 +1,10 @@
+interface;
+define behavior for ZI_PRPlanningTP alias PRPlanning
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+}

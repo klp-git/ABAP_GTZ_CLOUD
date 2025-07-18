@@ -1,0 +1,203 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Import Material', 
+    typeNamePlural: 'Import Materials', 
+    title: {
+      type: #STANDARD, 
+      label: 'Import Materials', 
+      value: 'Advancelicitemno'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Advancelicitemno', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZC_advancelicimport01TP with
+{
+  @UI.facet: [ {
+    id: 'idadvancelicimport', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Import Materials', 
+    position: 10 
+  } ]
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #HIGH, 
+    label: 'Company'
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Company'
+  } ]
+  Bukrs;
+  
+  @UI.lineItem: [ {
+    position: 20 , 
+    importance: #HIGH, 
+    label: 'Advance license'
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Advance license'
+  } ]
+  Advancelic;
+  
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'Item No'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Item No'
+  } ]
+  Advancelicitemno;
+  
+  @UI.lineItem: [ {
+    position: 40 , 
+    importance: #HIGH, 
+    label: 'Product code'
+  } ]
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Product code'
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZADVC_PRODUCTIMP_VH', element: 'Product' },
+                                        additionalBinding: [{ localElement: 'Productdesc',
+                                                              element: 'ProductDescription' },
+                                                               { localElement: 'Quantityunit',
+                                                              element: 'BaseUnit' }]
+                                    }]
+  Productcode;
+  
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH, 
+    label: 'Product description'
+  } ]
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Product description'
+  } ]
+  Productdesc;
+  
+  @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH, 
+    label: 'HS code'
+  } ]
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'HS code'
+  } ]
+  Hscode;
+  
+  @UI.lineItem: [ {
+    position: 70 , 
+    importance: #HIGH, 
+    label: 'UOM'
+  } ]
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'UOM'
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_UnitOfMeasureStdVH', element: 'UnitOfMeasure' } }]    
+  Quantityunit;
+  
+  @UI.lineItem: [ {
+    position: 80 , 
+    importance: #HIGH, 
+    label: 'Qty'
+  } ]
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Qty'
+  } ]
+  Licenseqty;
+  
+  @UI.lineItem: [ {
+    position: 90 , 
+    importance: #HIGH, 
+    label: 'CIF value'
+  } ]
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'CIF value'
+  } ]
+  Cifvalue;
+  
+  @UI.lineItem: [ {
+    position: 100 , 
+    importance: #HIGH, 
+    label: 'CIF value INR'
+  } ]
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'CIF value INR'
+  } ]
+  Cifvalueinr;
+  
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 110 , 
+    importance: #HIGH, 
+    label: 'Poqty'
+  } ]
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Poqty'
+  } ]
+  Poqty;
+  
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 120 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 120 
+  } ]
+  CreatedBy;
+  
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 130 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 130 
+  } ]
+  CreatedAt;
+  
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 140 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 140 
+  } ]
+  LastChangedBy;
+  
+  @UI.hidden: true
+  LastChangedAt;
+  
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 160 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 160 
+  } ]
+  LocalLastChangedAt;
+}

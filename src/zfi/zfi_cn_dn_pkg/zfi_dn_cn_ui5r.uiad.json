@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "FI_CN_DN",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zfidncn"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_09D99F9C7E1C4C7CE1B009E438B4BF93493AB6F5_TM",
+    "semanticObject": "zfi_dn_cn_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_09D99F9C7E1C4C7CE1B009E438B4BF93493AB6F5_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "FI_CN_DN",
+        "subtitle": "ZFI"
+      }
+    }
+  ]
+}

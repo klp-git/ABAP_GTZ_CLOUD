@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "ZFI_PR",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "purchaseregister.zpurchaseregister"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_5029AB6371C6ECE9EB116E32F366892D8ED974F4_TM",
+    "semanticObject": "ZFI_PR_SO",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_5029AB6371C6ECE9EB116E32F366892D8ED974F4_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZFI_PR",
+        "subtitle": "ZFI PURCHASE REGISTER"
+      }
+    }
+  ]
+}

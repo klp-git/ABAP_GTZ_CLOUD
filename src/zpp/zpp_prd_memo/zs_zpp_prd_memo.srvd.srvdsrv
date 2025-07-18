@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZS_ZPP_PRD_MEMO'
+define service ZS_ZPP_PRD_MEMO {
+  expose ZI_ZPP_PRD_MEMO;
+}

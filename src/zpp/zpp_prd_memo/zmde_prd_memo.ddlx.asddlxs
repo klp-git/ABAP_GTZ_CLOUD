@@ -1,0 +1,72 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Production Memo',
+    typeNamePlural: 'Memo Data',
+    title: {
+      type: #STANDARD,
+      label: 'Production Memo',
+      value: 'Reservation'
+    }
+  },
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Reservation',
+      direction: #DESC
+    } ],
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZI_ZPP_PRD_MEMO with
+{
+  @UI.facet: [ {
+      id: 'idCollection',
+      type: #COLLECTION,
+      label: 'Memo Details',
+      position: 10,
+      purpose: #STANDARD
+    },
+    {
+      id: 'idIdentification',
+      parentId: 'idCollection',
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'General Information',
+      position: 10
+    } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    importance: #HIGH,
+    label: 'Reservation'
+  }
+  ,{label: 'Reservation' }
+  ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Reservation'
+  }
+  ,{label: 'Reservation' }
+  ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  Reservation;
+   @UI.lineItem: [ {
+    position: 10 ,
+    importance: #HIGH,
+    label: 'Division'
+  }
+  ,{label: 'Division' }
+  ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Division'
+  }
+  ,{label: 'Division' }
+  ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  DivisionName;
+}

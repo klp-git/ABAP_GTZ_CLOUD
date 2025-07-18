@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Material'
+define service Zsrv_d_Mat {
+  expose ZC_DD_Mat;
+}

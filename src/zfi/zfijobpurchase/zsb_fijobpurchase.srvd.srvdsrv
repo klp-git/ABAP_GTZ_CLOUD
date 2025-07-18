@@ -1,0 +1,4 @@
+@EndUserText.label: 'SB OF ZFIJOBPURCHASE'
+define service ZSB_FIJOBPURCHASE {
+  expose ZCDS_FIJOBPURCHASE;
+}

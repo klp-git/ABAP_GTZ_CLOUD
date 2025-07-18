@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Salary Pending",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zsalarypends"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_703556B66CF3C623D973A0466691E3F50821BC71_TM",
+    "semanticObject": "ZSALARYPENDS",
+    "action": "List",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_703556B66CF3C623D973A0466691E3F50821BC71_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Salary Pending",
+        "subtitle": "ZSPEND"
+      }
+    }
+  ]
+}

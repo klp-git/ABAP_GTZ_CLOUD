@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "FI Purchase Register",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zfipurregb"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_42320FD12061FA8E9F312ACF022BFB6B36C21CEB_TM",
+    "semanticObject": "zfi_purreg_b",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_42320FD12061FA8E9F312ACF022BFB6B36C21CEB_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "FI Purchase Register",
+        "subtitle": "ZFI_PUR_REG"
+      }
+    }
+  ]
+}

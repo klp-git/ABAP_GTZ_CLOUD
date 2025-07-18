@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition:Return Delivery Slip'
+define service Zui_qm_retslip_def {
+  expose zi_qm_ret__slip_root;
+}

@@ -1,0 +1,52 @@
+managed implementation in class zbp_form_hdr_tab_i unique;
+strict ( 1 ); with draft;
+
+define behavior for zform_hdr_tab_i alias Form
+persistent table zform_hdr_tab
+draft table zform_h_d_tab
+lock master
+total etag Locallastchangedat
+authorization master ( global )
+etag master Lastchangedat
+{
+  create;
+  update;
+  delete;
+  association _Attachments { create; with draft; }
+  field ( numbering : managed, readonly ) Id;
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  mapping for zform_hdr_tab
+    {
+      Id                 = id;
+      TemplateName       = template_name;
+      Description        = description;
+      Lastchangedat      = lastchangedat;
+      Locallastchangedat = locallastchangedat;
+    }
+}
+
+define behavior for zform_att_tab_i alias Attachments
+persistent table zform_att_tab
+draft table zform_a_d_tab
+lock dependent by _Form
+authorization dependent by _Form
+etag master Lastchangedat
+{
+  update;
+  delete;
+  field ( readonly ) Id;
+  association _Form { with draft; }
+  mapping for zform_att_tab
+    {
+      TempId      = temp_id;
+      Attachment  = attachment;
+      Description = description;
+      Filename    = filename;
+      Id          = id;
+      Mimetype    = mimetype;
+    }
+}

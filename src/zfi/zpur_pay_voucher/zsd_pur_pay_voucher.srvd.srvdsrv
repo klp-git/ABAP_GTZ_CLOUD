@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZPUR_PAY_VOUCHER'
+define service ZSD_PUR_PAY_VOUCHER {
+  expose ZPUR_PAY_CD_VOUCHER;
+}

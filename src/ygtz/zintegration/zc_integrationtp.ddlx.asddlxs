@@ -1,0 +1,106 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Integration', 
+    typeNamePlural: 'Integrations', 
+    title: {
+      type: #STANDARD, 
+      label: 'Integration', 
+      value: 'Intgmodule'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Intgmodule', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate view ZC_IntegrationTP with
+{
+  @UI.facet: [ {
+    id: 'idCollection', 
+    type: #COLLECTION, 
+    label: 'Integration', 
+    position: 10 
+  }, 
+  {
+    id: 'idIdentification', 
+    parentId: 'idCollection', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'General Information', 
+    position: 10 
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #HIGH, 
+    label: 'Intgmodule'
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Intgmodule'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Intgmodule;
+  
+  @UI.lineItem: [ {
+    position: 20 , 
+    importance: #HIGH, 
+    label: 'Intgpath'
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Intgpath'
+  } ]
+  Intgpath;
+  
+  @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 30 
+  } ]
+  CreatedBy;
+  
+  @UI.lineItem: [ {
+    position: 40 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  CreatedAt;
+  
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 50 
+  } ]
+  LastChangedBy;
+  
+  @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  LastChangedAt;
+  
+  @UI.lineItem: [ {
+    position: 70 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  LocalLastChangedAt;
+}

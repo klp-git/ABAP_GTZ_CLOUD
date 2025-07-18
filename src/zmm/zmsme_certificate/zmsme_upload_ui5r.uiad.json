@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Msme Upload",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zmsmefileupload"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_68981445FA4B80DD8246D1A12784D56272667121_TM",
+    "semanticObject": "zmsme_upload_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_68981445FA4B80DD8246D1A12784D56272667121_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Msme Upload",
+        "subtitle": "zmsme"
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+projection;
+strict ( 2 );
+define behavior for ZC_SalesTrendTP alias SalesTrend
+use etag
+
+{
+ // use create; disable create button
+  use update;
+  use delete;
+}

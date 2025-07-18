@@ -1,0 +1,149 @@
+managed;
+strict ( 2 );
+define behavior for ZR_purchaseinvTP alias purchaseinv
+implementation in class ZBP_R_purchaseinvTP unique
+persistent table zpurchinvproc
+etag master Creationdatetime
+lock master
+authorization master ( global )
+
+{
+  field ( readonly )
+  Creationdatetime;
+
+  field ( readonly : update )
+  Companycode,
+  Fiscalyearvalue,
+  Supplierinvoice;
+
+
+  create;
+  delete;
+
+  mapping for zpurchinvproc
+    {
+      Companycode                   = COMPANYCODE;
+      Fiscalyearvalue               = FISCALYEARVALUE;
+      Supplierinvoice               = SUPPLIERINVOICE;
+      Supplierinvoicewthnfiscalyear = SUPPLIERINVOICEWTHNFISCALYEAR;
+      Creationdatetime              = CREATIONDATETIME;
+      AddressID                     = AddressID;
+    }
+
+  association _purchaseline { }
+}
+
+define behavior for ZR_purchaselineTP alias purchaseline
+implementation in class ZBP_R_purchaselineTP unique
+persistent table zpurchinvlines
+etag dependent by _purchaseinv
+lock dependent by _purchaseinv
+authorization dependent by _purchaseinv
+
+{
+  field ( readonly )
+  Companycode,
+  Fiscalyearvalue,
+  Supplierinvoice;
+
+  field ( readonly : update )
+  Supplierinvoiceitem;
+
+
+  //  update;
+  //  delete;
+
+  mapping for zpurchinvlines
+    {
+      Companycode                    = COMPANYCODE;
+      Fiscalyearvalue                = FISCALYEARVALUE;
+      Supplierinvoice                = SUPPLIERINVOICE;
+      Supplierinvoiceitem            = SUPPLIERINVOICEITEM;
+      Postingdate                    = POSTINGDATE;
+      Plantname                      = PLANTNAME;
+      Plantadr                       = PLANTADR;
+      Plantcity                      = PLANTCITY;
+      Plantgst                       = PLANTGST;
+      Plantpin                       = PLANTPIN;
+      Product                        = PRODUCT;
+      Productname                    = PRODUCTNAME;
+      Othercharge_fright             = OTHERCHARGE_FRIGHT;
+      Assetno                        = ASSETNO;
+      Assetname                      = ASSETNAME;
+      Purchaseorder                  = PURCHASEORDER;
+      Purchaseorderitem              = PURCHASEORDERITEM;
+      ///////////////////////// **************************** ///////////////////////////////////
+      product_trade_name             = product_trade_name;
+      vendor_invoice_no              = vendor_invoice_no;
+      vendor_invoice_date            = vendor_invoice_date;
+      VendorGroup                    = vendor_group;
+      vendor_type                    = vendor_type;
+      typeofenterprise               = TypeofEnterprise;
+      udhyamaadharno                 = UdhyamAadharNo;
+      udhyamcertificatedate          = UdhyamCertificateDate;
+      udhyamcertificatereceivingdate = UdhyamCertificateReceivingDate;
+      rfqno                          = RFQNO;
+      rfqdate                        = RFQDate;
+      supplierquotation              = SupplierQuotation;
+      supplierquotationdate          = supplierquotationdate;
+      ////////////////////////////////*******************//////////////////////////////////////
+      Baseunit                       = BASEUNIT;
+      Profitcenter                   = PROFITCENTER;
+      Purchaseordertype              = PURCHASEORDERTYPE;
+      Purchaseorderdate              = PURCHASEORDERDATE;
+      Purchasingorganization         = PURCHASINGORGANIZATION;
+      Purchasinggroup                = PURCHASINGGROUP;
+      Mrnquantityinbaseunit          = MRNQUANTITYINBASEUNIT;
+      Mrnpostingdate                 = MRNPOSTINGDATE;
+      Hsncode                        = HSNCODE;
+      Taxcodename                    = TAXCODENAME;
+      Originalreferencedocument      = ORIGINALREFERENCEDOCUMENT;
+      Igst                           = IGST;
+      Sgst                           = SGST;
+      Cgst                           = CGST;
+      Rateigst                       = RATEIGST;
+      Ratecgst                       = RATECGST;
+      Ratesgst                       = RATESGST;
+      Rcmigst                        = RCMIGST;
+      Rcmcgst                        = RCMCGST;
+      Rcmsgst                        = RCMSGST;
+      Gstinputtype                   = GSTINPUTTYPE;
+      Documenttypename               = DOCUMENTTYPENAME;
+      Debitcreditcode                = DEBITCREDITCODE;
+      Documentcurrency               = DOCUMENTCURRENCY;
+      Exchangerate                   = EXCHANGERATE;
+      Taxablevalue                   = TAXABLEVALUE;
+      Assessablevalue                = ASSESSABLEVALUE;
+      Invoicestatus                  = INVOICESTATUS;
+      JournaldocumentrefID           = JOURNALDOCUMENTREFID;
+      Journaldocumentdate            = JOURNALDOCUMENTDATE;
+      Isreversed                     = ISREVERSED;
+      Basicrate                      = BASICRATE;
+      Netamount                      = NETAMOUNT;
+      Taxamount                      = TAXAMOUNT;
+      Roundoff                       = ROUNDOFF;
+      Manditax                       = MANDITAX;
+      Mandicess                      = MANDICESS;
+      Discount                       = DISCOUNT;
+      Totalamount                    = TOTALAMOUNT;
+      fidocumentno                   = fidocumentno;
+      documenttype                   = documenttype;
+      vendorname                     = vendorname;
+      VendorCode                     = VendorCode;
+      supplierpanno                  = supplierpanno;
+      suppliergstno                  = suppliergstno;
+      ewaybilldate                   = ewaybilldate;
+      ewaybillno                     = ewaybillno;
+      grnno                          = grnno;
+      grndate                        = grndate;
+      grnqty                         = grnqty;
+      deliveryqty                    = deliveryqty;
+      inboundno                      = inboundno;
+      inbounddate                    = inbounddate;
+      inspectionlot                  = inspectionlot;
+      inspectiondate                 = inspectiondate;
+      taxcode = taxcode;
+    }
+
+  association _purchaseinv;
+}

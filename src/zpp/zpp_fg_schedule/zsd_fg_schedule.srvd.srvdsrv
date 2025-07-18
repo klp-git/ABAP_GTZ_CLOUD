@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Defination For FG Schedule'
+define service Zsd_fg_schedule {
+  expose ZDD_FG_SCHEDULE;
+}

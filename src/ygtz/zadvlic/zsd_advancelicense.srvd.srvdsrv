@@ -1,0 +1,8 @@
+@ObjectModel.leadingEntity.name: 'ZC_advancelicenseTP'
+define service ZSD_advancelicense {
+  expose ZC_advancelicenseTP     as advancelicense;
+  expose ZC_advancelicexportTP   as advancelicexport;
+  expose ZC_advancelicimport01TP as advancelicimport;
+  expose ZADVC_PRODUCTEXP_VH     as ZADVC_PRODUCTEXP_VH;
+  expose ZADVC_PRODUCTIMP_VH     as ZADVC_PRODUCTIMP_VH;
+}

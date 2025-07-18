@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "ztrade_tmg",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "ztradetech"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A968F271F142DC85B299EF9DC0941197F70E68B2_TM",
+    "semanticObject": "ztrade_so",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A968F271F142DC85B299EF9DC0941197F70E68B2_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ztrade_tmg",
+        "subtitle": "ztrade"
+      }
+    }
+  ]
+}
